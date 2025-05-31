@@ -1,0 +1,107 @@
+  #include<iostream>
+  
+  using namespace std;
+  
+  void informasi_pribadi(){
+  	cout<<"1. "<<"KRS_\n";
+  	cout<<"2. "<<"JADWAL KULIAH_\n";
+  	cout<<"3. "<<"NILAI_\n";
+  	cout<<"4. "<<"SPP_\n";
+  }
+  
+  void KRS(){
+  	cout<<"+--------------------------------------------------------------+\n";
+  	cout<<"|   Waktu   | Senin | Selasa | Rabu |   Kamis  | Jumat | Sabtu |\n";
+  	cout<<"+--------------------------------------------------------------+\n";
+  	cout<<"|   7 - 8   | Alpro | ------ | ---- |  Matdis  | ----- | ----- |\n";
+  	cout<<"|   8 - 9   | Alpro | ------ | PWeb |  Matdis  | ----- | ----- |\n";
+  	cout<<"|   9 - 10  | Alpro | B.indo | PWeb | -------- | ----- | ----- |\n";
+  	cout<<"|  10 - 11  | ----- | B.indo | ---- | -------- | ----- | ----- |\n";
+  	cout<<"+--------------------------------------------------------------+\n";	
+  }void jadwalkuliah(){
+  	string b;
+  	cout<<"tuliskan semester ada sekarang!(satu/dua)";
+  	cin>>b;
+  	if(b == "satu"){
+  			cout<<"+--------------------------------------------------------------+\n";
+  			cout<<"|   Waktu   | Senin | Selasa | Rabu |   Kamis  | Jumat | Sabtu |\n";
+  			cout<<"+--------------------------------------------------------------+\n";
+  			cout<<"|   7 - 8   | Alpro | ------ | ---- |  Matdis  | ----- | ----- |\n";
+  			cout<<"|   8 - 9   | Alpro | ------ | PWeb |  Matdis  | ----- | ----- |\n";
+  			cout<<"|   9 - 10  | Alpro | B.indo | PWeb | -------- | ----- | ----- |\n";
+  			cout<<"|  10 - 11  | ----- | B.indo | ---- | -------- | ----- | ----- |\n";
+  			cout<<"+--------------------------------------------------------------+\n";	
+  	}else if (b == "dua"){
+  			cout<<"+--------------------------------------------------------------+\n";
+  			cout<<"|   Waktu   | Senin | Selasa | Rabu |   Kamis  | Jumat | Sabtu |\n";
+  			cout<<"+--------------------------------------------------------------+\n";
+  			cout<<"|   7 - 8   | ----- | ------ | ---- |  B.indo  | Alpro | ----- |\n";
+  			cout<<"|   8 - 9   | ----- | ------ | PWeb |  B.indo  | Alpro | ----- |\n";
+  			cout<<"|   9 - 10  | ----- | Matdis | PWeb | -------- | Alpro | ----- |\n";
+  			cout<<"|  10 - 11  | ----- | Matdis | ---- | -------- | ----- | ----- |\n";
+  			cout<<"+--------------------------------------------------------------+\n";	
+  	}else{
+  		cout<<"Tidak valid!";
+  	}
+  }void nilai(){
+  	cout<<"+--------------------------------+\n";
+  	cout<<"| No | Mata kuliah | Nilai | SKS |\n";
+  	cout<<"+--------------------------------+\n";
+  	cout<<"| 1. |    Alpro    |  100  |  3  |\n";
+  	cout<<"| 1. |    B.indo   |  100  |  2  |\n";
+  	cout<<"| 1. |   Matdis    |  100  |  2  |\n";
+  	cout<<"| 1. |    PWeb     |  100  |  2  |\n";
+  	cout<<"+--------------------------------+\n";
+  }void spp(){
+  	int alpro = 3;
+  	int matdis = 2;
+  	int pweb = 2;
+  	int Bindo = 2;
+  	int sks = 250000; 
+  	int jumlah = (alpro + matdis + pweb + Bindo)*sks; 
+  	cout<<"==== Tagihan SPP ====\n";
+  	cout<<"Alpro\t: "<<"3 SKS\n";
+  	cout<<"B.Indo\t: "<<"2 SKS\n";
+  	cout<<"Matdis\t: "<<"2 SKS\n";
+  	cout<<"PWeb\t: "<<"2 SKS\n";
+  	cout<<"------------------------------------\n";
+  	cout<<"1 SKS\t: 250000\n";
+  	cout<<"Total SKS\t: "<<"9 SKS\n";
+  	cout<<"Total Pembayaran\t: "<<jumlah;
+  }
+  int main(){
+  	
+  	string Password;
+  	string name;
+  	int a;
+  	
+  	cout<<"Masukkan Ussername(Budi)...";
+  	cin>>name;
+  	cout<<"Masukkan Password(2400018128)...";
+  	cin>>Password;
+  	
+  	
+  	if(name == "Budi"){
+  		if(Password == "2400018128"){
+  			cout<<"*==== MENU ====*\n";
+  			informasi_pribadi();
+  			cout<<"pilih menu...";
+  			cin>>a;
+  			if(a == 1){
+  				KRS();
+  			}else if(a == 2){
+  				jadwalkuliah();
+  			}else if(a == 3){
+  				nilai();
+  			}else if(a == 4){
+  				
+  			}
+  		}else{
+  			cout<<"password salah...\n";
+  		}
+  	}else{
+  		cout<<"tidak Valid...\n";
+  	}
+  
+  	return 0;
+  }
